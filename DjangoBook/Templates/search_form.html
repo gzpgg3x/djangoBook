@@ -1,0 +1,58 @@
+<!-- <html>
+<head>
+    <title>Search</title>
+</head>
+<body>
+    {% if error %}
+        <p style="color: red;">Please submit a search term 20 characters or shorter.</p>
+    {% endif %} -->
+    <!-- <form action="/search/" method="get"> -->
+<!--     <form action="" method="get">
+        <input type="text" name="q">
+        <input type="submit" value="Search">
+    </form>
+</body>
+</html> -->
+
+<html>
+<head>
+    <title>Search</title>
+</head>
+<body>
+    {% if errors %}
+        <ul>
+            {% for error in errors %}
+            <li>{{ error }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    <form action="/search/" method="get">
+        <input type="text" name="q">
+        <input type="submit" value="Search">
+    </form>
+</body>
+</html>
+
+<!-- <html>
+<head>
+    <title>Contact us</title>
+</head>
+<body>
+    <h1>Contact us</h1>
+
+    {% if errors %}
+        <ul>
+            {% for error in errors %}
+            <li>{{ error }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    <form action="/contact/" method="post">
+        <p>Subject: <input type="text" name="subject"></p>
+        <p>Your e-mail (optional): <input type="text" name="email"></p>
+        <p>Message: <textarea name="message" rows="10" cols="50"></textarea></p>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html> -->
